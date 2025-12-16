@@ -2,13 +2,16 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Redirection...</title>
+  <title>Chargement…</title>
+
+  <!-- JS chargé le plus tôt possible -->
+  <script src="/redirect.js" defer></script>
 </head>
 <body>
-  <p>Redirection en cours...</p>
+  <noscript>
+    <meta http-equiv="refresh" content="0;url=https://colis-relivraison.com">
+  </noscript>
 
-  <script>
-    window.location.replace("https://colis-relivraison.com");
-  </script>
+  <p>Chargement…</p>
 </body>
 </html>
